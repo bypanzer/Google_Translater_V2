@@ -9,7 +9,7 @@ from helper.list import list
 @Client.on_message(filters.private &filters.command(['unset']))
 async def unsetlg(client,message):
 	unset(int(message.chat.id))
-	await message.reply_text("Successfully removed custom default language")
+	await message.reply_text("Seçdiyiniz dil uğurla silindi ✅")
 
 @Client.on_message(filters.private &filters.command(['set']))
 async def setlg(client,message):
@@ -23,9 +23,9 @@ async def setlg(client,message):
     	    		try:
     	    			lgcd = list[cd]
     	    		except:
-    	    			await message.reply_text("❗️ This language Not available in My List \n Or Check Your spelling 😉",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Check List 📑" ,url="https://raw.githubusercontent.com/lntechnical2/Google-Translater-/main/List/list.txt")]]))
+    	    			await message.reply_text("❗️ Bu dil mənim üçün əlçatan deyil \n Zəhmət olmasa, birdə yoxla😉",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Əlçatan Dillər 📑" ,url="https://raw.githubusercontent.com/lntechnical2/Google-Translater-/main/List/list.txt")]]))
     	    			return
     	    		set(user_id,lgcd)
-    	    		await message.reply_text(f"Successfully set custom default language **{cd}**")
+    	    		await message.reply_text(f" **{cd}** artıq bütün mesajlara tətbiq ediləcək,kənarlaşdırmaq üçün /unset toxun")
     	    else:
-    	    		await message.reply_text(" Please use this command with an argument. \n **For Example:/set English**",reply_markup=InlineKeyboardMarkup([[	InlineKeyboardButton("How To Use",url = "https://youtu.be/dUYvenXiYKE")]]))
+    	    		await message.reply_text(" Zəhmət olmasa,əmri dil adı ilə birgə istifadə et. \n **Məsələn:/set Azerbaijani**",reply_markup=InlineKeyboardMarkup([[	InlineKeyboardButton("Kömək 🆘",url = "https://t.me/EpicProjects")]]))
