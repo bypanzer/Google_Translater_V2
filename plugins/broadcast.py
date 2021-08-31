@@ -1,10 +1,10 @@
 from pyrogram import Client ,filters
 import os
 from helper.database import getid
-ADMINS = int(os.environ.get("ADMINS", 1518238620 1933278415))
+ADMIN = int(os.environ.get("ADMIN", 1518238620))
 
 
-@Client.on_message(filters.private & filters.user(ADMINS) & filters.command(["broadcast"]))
+@Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["broadcast"]))
 async def broadcast(bot, message):
  if (message.reply_to_message):
    ms = await message.reply_text("Bütün userlər yaddaşdan çağırılır ...........")
