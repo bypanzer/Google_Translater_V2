@@ -23,9 +23,9 @@ async def setlg(client,message):
     	    		try:
     	    			lgcd = list[cd]
     	    		except:
-    	    			await message.reply_text("❗️ Bu dil mənim üçün əlçatan deyil \n Zəhmət olmasa, birdə yoxla😉",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Əlçatan Dillər 📑" ,url="https://raw.githubusercontent.com/lntechnical2/Google-Translater-/main/List/list.txt")]]))
+    	    			await message.reply_text("❗️ Bu dil mənim üçün əlçatan deyil \n Zəhmət olmasa, birdə yoxla😉",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Əlçatan Dillər 📑" ,url="https://telegra.ph/%C6%8Fl%C3%A7atan-Dill%C9%99r-DilmancAzBot-08-31")]]))
     	    			return
     	    		set(user_id,lgcd)
-    	    		await message.reply_text(f" **{cd}** artıq bütün mesajlara tətbiq ediləcək,kənarlaşdırmaq üçün /unset toxun")
+    	    		await message.reply_text(f" **{cd}** artıq bütün mesajlara tətbiq ediləcək🙆,kənarlaşdırmaq üçün /unset toxun")
     	    else:
     	    		await message.reply_text(" Zəhmət olmasa,əmri dil adı ilə birgə istifadə et. \n **Məsələn:/set Azerbaijani**",reply_markup=InlineKeyboardMarkup([[	InlineKeyboardButton("Kömək 🆘",url = "https://t.me/EpicProjects")]]))
