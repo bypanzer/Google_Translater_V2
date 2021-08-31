@@ -12,7 +12,7 @@ from pyrogram.types import (
 async def inline(_, query: InlineQuery):
         string = query.query.lower()
         if string == "":
-        	METHOD=  [ InlineQueryResultArticle( title="İstifadə qaydası", input_message_content=InputTextMessageContent("Nümunə ; ```@DilmancAzBot Tərcümə mətni #Ölkə Kodu```"),description="{Text} # {language code} ",thumb_url="https://tg-link.herokuapp.com/dl/0/AgADh60xG50-wFc.jpg")]
+        	METHOD=  [ InlineQueryResultArticle( title="İstifadə qaydası", input_message_content=InputTextMessageContent("Nümunə ; ```@DilmancAzBot Tərcümə mətni #Dil Kodu```"),description="{Mətn} # {Dil Kodu} ",thumb_url="https://tg-link.herokuapp.com/dl/0/AgADh60xG50-wFc.jpg")]
         	await query.answer( results=METHOD,  cache_time=2, switch_pm_text="Using Method",switch_pm_parameter="start" )
         else:
         	splitit = string.split("#")        	     	
